@@ -19,4 +19,16 @@ func main() {
 	var maxNum int
 	fmt.Scan(&maxNum)
 	fmt.Println("最大値: ", maxNum)
+
+	if minNum >= maxNum {
+		for minNum >= maxNum {
+			fmt.Println("最小値よりも最大値を大きい整数にしてください。")
+			fmt.Print("最小値: ")
+			fmt.Scan(&minNum)
+			fmt.Print("最大値: ")
+			fmt.Scan(&maxNum)
+		}
+	}
+
+	fmt.Println("OK!")
 }

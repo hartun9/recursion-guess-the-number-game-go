@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 func main() {
@@ -31,4 +33,8 @@ func main() {
 	}
 
 	fmt.Println("OK!")
+
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	randomNum := r.Intn(maxNum-minNum+1) + minNum
+	fmt.Println(randomNum)
 }

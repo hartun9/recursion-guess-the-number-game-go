@@ -38,5 +38,17 @@ func main() {
 
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	randomNum := r.Intn(maxNum-minNum+1) + minNum
-	fmt.Println(randomNum)
+
+	fmt.Print("\nそれでは私が思い浮かべた数を予想して入力してください: ")
+	var guess int
+	fmt.Scan(&guess)
+
+	if guess == randomNum {
+		fmt.Println("\n正解です！")
+	} else {
+		fmt.Println("\n不正解です！")
+	}
+
+	fmt.Println("正解: ", randomNum)
+	fmt.Println("あなたの予想: ", guess)
 }

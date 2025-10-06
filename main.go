@@ -32,7 +32,9 @@ func main() {
 		}
 	}
 
-	fmt.Println("OK!")
+	fmt.Println("\n範囲が決まりました。")
+	fmt.Println("最小値: ", minNum)
+	fmt.Println("最大値: ", maxNum)
 
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	randomNum := r.Intn(maxNum-minNum+1) + minNum
